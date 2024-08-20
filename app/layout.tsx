@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <TonConnectUIProvider manifestUrl="https://ton-connect.github.io/demo-dapp-with-wallet/tonconnect-manifest.json">
+      <TonConnectUIProvider manifestUrl="https://tonconnect-demo.vercel.app/tonconnect-manifest.json">
         <body className={inter.className}>{children}</body>
       </TonConnectUIProvider>
     </html>
