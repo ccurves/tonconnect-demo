@@ -1,8 +1,12 @@
 "use client";
 import Navbar from "@/component/Navbar";
-import { useTonAddress, useTonConnectUI } from "@tonconnect/ui-react";
+import {
+  useTonAddress,
+  useTonConnectModal,
+  useTonConnectUI,
+} from "@tonconnect/ui-react";
 import Image from "next/image";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import TonWeb from "tonweb";
 
 interface SendTransactionRequest {
@@ -27,7 +31,7 @@ export default function Home() {
     }
 
     const tonweb = new TonWeb();
-    const amount = TonWeb.utils.toNano("0.1"); // Convert to string
+    const amount = TonWeb.utils.toNano("0.01"); // Convert to string
 
     // Prepare the transaction payload
     const transactionPayload = {
@@ -51,12 +55,12 @@ export default function Home() {
   return (
     <main className="">
       <Navbar />
-
       <div>
         <span>User-friendly address: {userFriendlyAddress}</span>
         <br />
         <span>Raw address: {rawAddress}</span>
       </div>
+
       <div>
         <button
           onClick={sendTransaction}

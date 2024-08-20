@@ -6,11 +6,13 @@ type Props = {};
 const Navbar = (props: Props) => {
   return (
     <header className="">
-      <div className="flex w-full justify-between">
+      <div className="flex w-full justify-between px-2">
         <h2>My App with React UI</h2>
-        <div className="justify-end w-full">
-          <TonConnectButton />
-        </div>
+
+        <TonConnectButton
+          className="custom-button"
+          style={{ float: "right" }}
+        />
       </div>
     </header>
   );

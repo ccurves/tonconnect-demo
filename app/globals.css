@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-button button {
+  background-color: red !important;
+  border-radius: 10px;
+}
+
+.custom-button svg {
+  display: none;
+}
