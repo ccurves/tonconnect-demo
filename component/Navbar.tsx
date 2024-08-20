@@ -5,9 +5,13 @@ type Props = {};
 
 const Navbar = (props: Props) => {
   return (
-    <header className="flex justify-between">
-      <h2>My App with React UI</h2>
-      <TonConnectButton />
+    <header className="">
+      <div className="flex w-full justify-between">
+        <h2>My App with React UI</h2>
+        <div className="justify-end w-full">
+          <TonConnectButton />
+        </div>
+      </div>
     </header>
   );
 };

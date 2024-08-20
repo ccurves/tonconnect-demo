@@ -1,5 +1,5 @@
 {
-  "url": "ton-connect-demo",
+  "url": "https://tonconnect-demo.vercel.app",
   "name": "Ton Connect Demo",
   "iconUrl": "https://ton-connect.github.io/demo-dapp-with-wallet/apple-touch-icon.png"
 }
