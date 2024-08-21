@@ -1,4 +1,5 @@
 "use client";
+import CustomTonConnectButton from "@/component/ConnectButton";
 import Navbar from "@/component/Navbar";
 import {
   useTonAddress,
@@ -52,9 +53,12 @@ export default function Home() {
     }
   };
 
+  const { state, open, close } = useTonConnectModal();
+
   return (
     <main className="">
-      <Navbar />
+      {/* <Navbar /> */}
+      <CustomTonConnectButton />
       <div>
         <span>User-friendly address: {userFriendlyAddress}</span>
         <br />
